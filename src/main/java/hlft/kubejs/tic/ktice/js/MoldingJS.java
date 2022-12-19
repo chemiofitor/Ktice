@@ -9,10 +9,8 @@ public class MoldingJS extends RecipeJS {
     @Override
     public void create(ListJS args) {
         outputItems.add(parseResultItem(args.get(0)));
-        if (args.get(1) instanceof ItemStackJS material)
-            json.add("material", material.toJson());
-        if (args.get(2) instanceof ItemStackJS pattern)
-            json.add("pattern", pattern.toJson());
+        json.add("material", ItemStackJS.of((ListJS.orSelf(args.get(1)).get(0))).toResultJson());
+        json.add("pattern", ItemStackJS.of((ListJS.orSelf(args.get(2)).get(0))).toResultJson());
 
         if (outputItems.isEmpty()) {
             throw new RecipeExceptionJS("Molding recipe can't have no result!");

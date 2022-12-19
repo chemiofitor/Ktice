@@ -34,7 +34,7 @@ logoBlur=true
 authors = "Chemiofitor" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description = '''
-Additional TiC compatibility for kubejs
+Additional TiC compatibility for kubejs.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.ktice]] #optional

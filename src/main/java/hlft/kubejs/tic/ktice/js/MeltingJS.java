@@ -13,8 +13,7 @@ public class MeltingJS extends RecipeJS {
     public void create(ListJS args) {
         if ((ListJS.orSelf(args.get(0)).get(0)) instanceof FluidStackJS fluid)
             outputFluid = fluid;
-        if (ListJS.orSelf(args.get(1)).get(0) instanceof ItemStackJS stack)
-            json.add("ingredient", stack.toJson());
+        json.add("ingredient", ItemStackJS.of((ListJS.orSelf(args.get(1)).get(0))).toResultJson());
 
         json.addProperty("temperature", Math.max(0, ((Number)args.get(2)).intValue()));
         json.addProperty("time", Math.max(0, ((Number)args.get(3)).intValue()));
