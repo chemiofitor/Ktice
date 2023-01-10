@@ -1,1 +1,1 @@
-hlft.kubejs.tic.ktice.KticeJS
+hlft.kubejs.tic.ktice.KticePlugin

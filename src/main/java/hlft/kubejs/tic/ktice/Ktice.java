@@ -1,13 +1,15 @@
 package hlft.kubejs.tic.ktice;
 
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.Mod;
+import hlft.kubejs.tic.ktice.item.ItemTest;
+import net.fabricmc.api.ModInitializer;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
-@Mod(Ktice.MOD_ID)
-public class Ktice {
+public class Ktice implements ModInitializer {
     public static final String MOD_ID = "ktice";
 
-    public Ktice() {
-        MinecraftForge.EVENT_BUS.register(this);
+    @Override
+    public void onInitialize() {
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "test"), new ItemTest());
     }
 }

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "ktice",
+  "version": "${version}",
+  "name": "Ktice",
+  "description": " Additional TiC compatibility for kubejs.",
+  "authors": [
+    "Chemiofitor"
+  ],
+  "contact": {
+    "sources": "https://github.com/chemiofitor/Ktice",
+    "issues": "https://github.com/chemiofitor/Ktice/issues",
+    "website": "https://www.mcmod.cn/class/8496.html"
+  },
+  "license": "MIT",
+  "icon": "assets/ktice/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "hlft.kubejs.tic.ktice.Ktice"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.11",
+    "minecraft": "1.18.2",
+    "kubejs": ">=1802.5.1-build.331",
+    "tconstruct": "*"
+  }
+}
